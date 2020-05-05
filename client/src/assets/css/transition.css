@@ -1,0 +1,122 @@
+/* purgecss start ignore */
+.transition-all {
+  transition-property: all;
+}
+
+.transition-fastest {
+  transition-duration: 50ms;
+}
+
+.transition-faster {
+  transition-duration: 100ms;
+}
+
+.transition-fast {
+  transition-duration: 150ms;
+}
+
+.transition-medium {
+  transition-duration: 200ms;
+}
+
+.ease-out-quad {
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+.ease-in-quad {
+  transition-timing-function: cubic-bezier(.55, .085, .68, .53);
+}
+
+.scale-90 {
+  transform: scale(.9);
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+/* Fade transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide fade transition (match details) */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.4s;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(400px);
+  opacity: 0;
+}
+
+/* Tab transition */
+.tab-enter-active {
+  @apply transition-all transition-fast ease-out-quad;
+}
+
+.tab-enter {
+  opacity: 0;
+}
+
+.tab-enter-to {
+  opacity: 1;
+}
+
+/* Scale-fade transition */
+.scale-fade-enter-active {
+  @apply transition-all transition-fastest ease-out-quad;
+}
+
+.scale-fade-leave-active {
+  @apply transition-all transition-fastest ease-in-quad;
+}
+
+.scale-fade-enter,
+.scale-fade-leave-to {
+  @apply opacity-0 scale-90;
+}
+
+.scale-fade-enter-to,
+.scale-fade-leave {
+  @apply opacity-100 scale-100;
+}
+
+/* Grow transition (ripples) */
+.grow-enter-active,
+.grow-enter-to-active {
+  transition: all 1500ms ease-out;
+}
+
+.grow-leave-active,
+.grow-leave-to-active {
+  transition: all 700ms ease-out;
+}
+
+.grow-enter {
+  transform: scale(0);
+  opacity: 1;
+}
+
+.grow-enter-to {
+  transform: scale(4);
+  opacity: 1;
+}
+
+.grow-leave {
+  transform: scale(4);
+  opacity: 1;
+}
+
+.grow-leave-to {
+  transform: scale(4);
+  opacity: 0;
+}
+
+/* purgecss end ignore */
